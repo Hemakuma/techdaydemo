@@ -1,5 +1,7 @@
 # Ansible Demo
 
+### Host file
+[Host file](hosts)
 ### Example 1
 
 [vlan example 1](vlan-example-1.yml)
