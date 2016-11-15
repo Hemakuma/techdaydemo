@@ -1,0 +1,12 @@
+---
+- name: Deploy single vlan
+  hosts: leafs
+  connection: local
+  gather_facts: no
+
+  tasks:
+      - name: obtain login credentials
+        include_vars: credentials.yml
+
+      - name: config vlan
+        nxos_vlan: vlan_id=10  name=example-1  state=present provider="{{ creds }}"

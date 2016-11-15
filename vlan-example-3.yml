@@ -1,0 +1,16 @@
+---
+- name: Deploy vlan
+  hosts: leafs
+  connection: local
+  gather_facts: no
+
+  tasks:
+      - name: obtaining login credentials
+        include_vars: credentials.yml
+
+      - name: obtaining  vlan list
+        include_vars: vlan_list.yml
+
+      - name: configing vlans
+        nxos_vlan: vlan_id="{{ item.id }}"  name="{{ item.name }}" state="{{ item.state }}"  provider="{{ creds }}"
+        with_items: "{{ vlan_list }}"

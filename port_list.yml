@@ -1,0 +1,6 @@
+---
+port_list:
+    - { port: Ethernet1/1, vlan : 500, description: 'Esxi Server1' }
+    - { port: Ethernet1/2, vlan: 500, description: 'Esxi Server2' }
+    - { port: Ethernet1/3, vlan: 501, description: 'Openstack Server1' }
+    - { port: Ethernet1/4, vlan: 501, description: 'Openstack Server2' }
