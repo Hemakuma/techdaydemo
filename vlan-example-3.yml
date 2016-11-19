@@ -11,6 +11,12 @@
       - name: obtaining  vlan list
         include_vars: vlan_list.yml
 
-      - name: configing vlans
+      - name: configuring vlans using vlan_list.yml
         nxos_vlan: vlan_id="{{ item.id }}"  name="{{ item.name }}" state="{{ item.state }}"  provider="{{ creds }}"
         with_items: "{{ vlan_list }}"
+
+      - name: Saving Configuration
+        nxos_config:
+          provider: "{{ creds }}"
+          lines:
+            - 'copy run start'

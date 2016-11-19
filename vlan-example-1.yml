@@ -5,8 +5,14 @@
   gather_facts: no
 
   tasks:
-      - name: obtain login credentials
+      - name: obtaining login credentials
         include_vars: credentials.yml
 
-      - name: config vlan
+      - name: configuring vlan
         nxos_vlan: vlan_id=10  name=example-1  state=present provider="{{ creds }}"
+
+      - name: Saving Configuration
+        nxos_config:
+          provider: "{{ creds }}"
+          lines:
+            - 'copy run start'
