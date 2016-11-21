@@ -1,6 +1,6 @@
 ---
 - name: Deploy vlan
-  hosts: all
+  hosts: leafs
   connection: local
   gather_facts: no
 
