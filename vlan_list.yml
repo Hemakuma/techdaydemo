@@ -8,4 +8,5 @@ vlan_list:
     - { id: 501, name: 'DB-example-4', state: present }
     - { id: 601, name: 'DB-example-git13', state: present }
     - { id: 602, name: 'DB-example-jenkins', state: present }
+    - { id: 701, name: 'DB-example-jenkin-1', state: present }
 #
