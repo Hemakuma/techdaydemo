@@ -1,6 +1,0 @@
-- hosts: leafs
-  connection: local
-  strategy: free
-  roles:
-    - { role: login, tags: [ 'login' ] }
-    - { role: vlans, tags: [ 'login', 'vlans'] }

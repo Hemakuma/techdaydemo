@@ -26,8 +26,8 @@
         nxos_switchport: interface="{{ item.port }}" mode=access access_vlan="{{ item.vlan }}" provider="{{ creds }}"
         with_items: "{{ port_list }}"
 
-      - name: Saving Configuration
-        nxos_config:
-          provider: "{{ creds }}"
-          lines:
-            - 'copy run start'
+    #   - name: Saving Configuration
+    #     nxos_config:
+    #       provider: "{{ creds }}"
+    #       lines:
+    #         - 'copy run start'
