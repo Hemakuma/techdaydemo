@@ -17,9 +17,3 @@
         with_items:
           - { id: 20, name: 'WEB-example-2', state: present }
           - { id: 30, name: 'APP-example-2' , state: present }
-
-      # - name: Saving Configuration
-      #   nxos_config:
-      #     provider: "{{ creds }}"
-      #     lines:
-      #       - 'copy run start'
