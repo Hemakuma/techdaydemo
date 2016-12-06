@@ -9,7 +9,7 @@
         include_vars: credentials.yml
 
       - name: configuring vlan
-        nxos_vlan: vlan_id=10  name=example-10  state=present provider="{{ creds }}"
+        nxos_vlan: vlan_id=10  name=example-1  state=present provider="{{ creds }}"
 
       - name: Saving Configuration
         nxos_config:
